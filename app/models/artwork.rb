@@ -8,11 +8,11 @@ class Artwork < ApplicationRecord
         class_name: :User
     })
 
-    has_many(:shared_viewer, {
+    has_many(:shared_viewers, {
         primary_key: :id,
         foreign_key: :artwork_id,
-        class_name: :Artworkshare
+        class_name: :ArtworkShare
     })
 
-    has_many :User, through: :Artworkshare
+    has_many :User, through: :shared_viewers
 end

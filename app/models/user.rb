@@ -5,10 +5,11 @@ class User < ApplicationRecord
         foreign_key: :artist_id,
         class_name: :User
     })
-    has_many(:Artworkshare, {
+    has_many(:ArtworkShare, {
         primary_key: :id,
         foreign_key: :artwork_id,
-        class_name: :Artworkshare
+        class_name: :ArtworkShare
     })
-    has_many :artworks, through: :Artworkshare
+    has_many :artworks, through: :ArtworkShare
 end
+

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ArtworkshareTest < ActiveSupport::TestCase
+class ArtworkShareTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
