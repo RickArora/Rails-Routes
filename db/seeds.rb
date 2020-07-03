@@ -17,13 +17,13 @@ Artwork.create(title: 'ArtImage1', image_url: 'fake_url_id2', artist_id: 2)
 Artwork.create(title: 'ArtImage2', image_url: 'fake_url_new_id2', artist_id: 2)
 Artwork.create(title: 'ArtImage3', image_url: 'fake_url_new_id2', artist_id: 2)
 
-ArtworkShare.create(artwork_id: 2, viewer_id: 2)
-ArtworkShare.create(artwork_id: 1, viewer_id: 2)
-ArtworkShare.create(artwork_id: 3, viewer_id: 2)
-ArtworkShare.create(artwork_id: 2, viewer_id: 1)
-ArtworkShare.create(artwork_id: 2, viewer_id: 1)
-ArtworkShare.create(artwork_id: 2, viewer_id: 2)
-ArtworkShare.create(artwork_id: 2, viewer_id: 4)
+ArtworkShare.create(artwork: Artwork.first, viewer: User.first, viewer_id: 1, artwork_id: 1)
+ArtworkShare.create(artwork: Artwork.first, viewer: User.second, viewer_id: 2, artwork_id: 1)
+ArtworkShare.create(artwork: Artwork.first, viewer: User.third, viewer_id: 3, artwork_id: 1)
+ArtworkShare.create(artwork: Artwork.second, viewer: User.first, viewer_id: 1, artwork_id: 2)
+ArtworkShare.create(artwork: Artwork.second, viewer: User.second, viewer_id: 2, artwork_id: 2)
+ArtworkShare.create(artwork: Artwork.second, viewer: User.third, viewer_id: 3, artwork_id: 1)
+ArtworkShare.create(artwork: Artwork.third, viewer: User.fourth, viewer_id: 4, artwork_id: 4)
 
 
 

@@ -7,7 +7,7 @@ class User < ApplicationRecord
     })
     has_many(:shared_artworks, {
         primary_key: :id,
-        foreign_key: :artist_id,
+        foreign_key: :viewer_id,
         class_name: :ArtworkShare
     })
     has_many :artwork, through: :shared_artworks
