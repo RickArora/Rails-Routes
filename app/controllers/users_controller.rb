@@ -19,22 +19,23 @@ class UsersController < ApplicationController
   end
 
   def update
+  #  User.count do |a|
+  #   a.username = #get new username somehow
+  #  end
     user = User.find(params[:id])
     user.update(user_params)
-
     render json: user
   end
 
   def destroy
     user = User.find(params[:id])
     user.destroy
-
     render json: user
   end
 
   private
   def user_params
-    params[:user].permit(:name, :email)
+    params[:user].permit(:username)
   end
 
 end

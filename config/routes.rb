@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users, only: [:show, :index, :create, :destroy, :update]
+  resources :artworks, only: [:show, :index, :create, :destroy, :update]
   # get '/users/:id', to: 'users#show'
   # get '/users', to: 'users#index'
   # post '/users', to: 'users#create', as: 'users'
