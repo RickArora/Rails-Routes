@@ -1,4 +1,4 @@
-class ArtworkshareController < ApplicationController
+class ArtworkSharesController < ApplicationController
     def create
         artworkshare = ArtworkShare.new(artworkshare_params)
         if artworkshare.save
